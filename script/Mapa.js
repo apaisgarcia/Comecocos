@@ -1,18 +1,18 @@
 const ROWS=4;
-const COLUMNS=10;
+const COLUMNS=4;
 const SIZE_IMAGE=32;
 
 
 class Mapa {
 
-    maze = [0,0,0,1,
+    maze= [0,0,0,1,
         1,1,0,0,
         0,0,0,0,
         1,1,1,1
     ]
 
-    constructor(mapaNuevo) {
-        this.maze = MapaNuevo;
+    constructor(nuevoMapa) {
+        this.maze = nuevoMapa;
     }
 
     get maze() {

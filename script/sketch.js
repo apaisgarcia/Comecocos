@@ -15,21 +15,22 @@ function draw(){ //
   clear(); // le quita el rastro
   background(20);
    // console.log(mapajuego.maze.length);
-    /*  for(let i=0;i < mapajuego.maze.length ;i++){
-         console.log(maze.length);
+     for(let i=0;i < mapajuego.maze.length ;i++){
+
       if (mapajuego.maze[i] === 1)
        {
-           image(imagenRoca, ,0,);
+           columnaActual=i% ROWS;
+           filaActual=i/COLUMNS;
+            console.log(columnaActual);
+            console.log(filaActual);
+           //image(imagenRoca, ,0,);
        }
-       {
-           console.log("ladrillo");
-       }else{
-           console.log("libre");
+
+
+
+
+
        }
-
-
-
-       }*/
       x=x+1; // para ir avanzando  si pongo +4 tiene más velocidad
 
 
