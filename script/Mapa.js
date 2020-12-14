@@ -6,9 +6,9 @@ const SIZE_IMAGE=32;
 class Mapa {
 
     maze= [0,0,0,1,
-        1,1,0,0,
-        0,0,0,0,
-        1,1,1,1
+           1,1,0,0,
+           0,0,0,0,
+           1,1,1,1
     ]
 
     constructor(nuevoMapa) {
