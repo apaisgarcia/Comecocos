@@ -1,38 +1,49 @@
-var x=0;
-var mapajuego = new Mapa();
 
-function preload(){ // cargar antes de comenzar
- //img = loadImage("images/pacman32.png");k
+
+
+var arrayRocasMapa=[]; // esto es como un new array
+var myMapa=new Game();
+var myMapa2=new Game(10,20);
+var imgRoca;
+var imgPacman;
+
+function preload(){ // cargar antes de comenzar img = loadImage("images/pacman32.png");k
  imgPacman=loadImage("images/pacman32.png");
  imgRoca=loadImage("images/roca.jpg");
 }
-function setup(){ //crear la pantalla
-    let myCanvas;
-    myCanvas = createCanvas( COLUMNS*SIZE_IMAGE,ROWS*SIZE_IMAGE);
-    image(imgPacman, 0,0);
+function setup() { //crear la pantalla
+
+    createCanvas(COLUMNS * SIZE_IMAGE, ROWS * SIZE_IMAGE);
+
+    console.log("Filas :" , myMapa.mapa.length);
+
+    for (let i = 0; i < myMapa.mapa.length; i++) { //entro en i y j
+        for (let j = 0; j < myMapa.mapa.length; j++) {
+            if (myMapa.mapa[i][j] === 1) {
+                console.log("Añado roca en fila, ", i);
+                console.log("Añado roca en columna , ", j);
+                arrayRocasMapa.push(new Roca(myMapa.sizeImage * j, myMapa.sizeImage * i)); //
+
+            } else {
+                console.log("No hay roca");
+            }
+
+
+        }//cierro j
+    }// cierro i
+
 }
-function draw(){ //
-  clear(); // le quita el rastro
-  background(20);
-   // console.log(mapajuego.maze.length);
-     for(let i=0;i < mapajuego.maze.length ;i++){
 
-      if (mapajuego.maze[i] === 1)
-       {
-           columnaActual=i% ROWS;
-           filaActual=i/COLUMNS;
-            console.log(columnaActual);
-            console.log(filaActual);
-           //image(imagenRoca, ,0,);
-       }
+    function draw() { //
+       // clear(); // le quita el rastro
+        background(20);
+        console.log("estoy en draw");
+        for(let i= 0; i < arrayRocasMapa.length; i++){
+            arrayRocasMapa[i].show();
+        }
 
 
 
 
 
-       }
-      x=x+1; // para ir avanzando  si pongo +4 tiene más velocidad
-
-
-  image(imgPacman, x ,0); //si en el cero pongo x baja de lado
 }
