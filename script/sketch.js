@@ -4,8 +4,8 @@ var imgPacman;
 const s = (p) => {
 
     var arrayRocasMapa = []; // esto es como un new array
-    var myMapa = new Game();
-    var myMapa2 = new Game(10, 20);
+    var myMapa = new Game(); // si hago yo el array
+    var myMapa2 = new Game(10, 10); //aray aleatorio
 
 
      p.preload = function() { // cargar antes de comenzar img = loadImage("images/pacman32.png");k
@@ -15,16 +15,16 @@ const s = (p) => {
 
     p.setup = function() { //crear la pantalla
 
-        p.createCanvas(COLUMNS * SIZE_IMAGE, ROWS * SIZE_IMAGE);
-
+       // p.createCanvas(COLUMNS * SIZE_IMAGE, ROWS * SIZE_IMAGE);
+        p.createCanvas(myMapa2.columnGame*myMapa2.sizeImage, myMapa2.rowsGame*myMapa2.sizeImage);
         console.log("Filas :", myMapa.mapa.length);
 
-        for (let i = 0; i < myMapa.mapa.length; i++) { //entro en i y j
-            for (let j = 0; j < myMapa.mapa.length; j++) {
-                if (myMapa.mapa[i][j] === 1) {
+        for (let i = 0; i < myMapa2.mapa.length; i++) { //entro en i y j
+            for (let j = 0; j < myMapa2.mapa.length; j++) {
+                if (myMapa2.mapa[i][j] === 1) {
                     console.log("Añado roca en fila, ", i);
                     console.log("Añado roca en columna , ", j);
-                    arrayRocasMapa.push(new Roca(myMapa.sizeImage * j, myMapa.sizeImage * i)); //
+                    arrayRocasMapa.push(new Roca(myMapa2.sizeImage * j, myMapa2.sizeImage * i)); //
 
                 } else {
                     console.log("No hay roca");

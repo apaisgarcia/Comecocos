@@ -28,7 +28,7 @@ class Game {
                 let fila =[];
                 for (let j = 0; j < columnGame; j++) {
 
-                    let num = Math.random(1,9)*10 ;
+                    let num =Math.round( Math.random(0,1)*3); // numero aleatorio y redondeando (entre 0 y 3) sino aparecen muchas rocas
                     console.log("Numero aleatorio asigandao; ", num);
                     fila.push(num);
                 } //cierro j
@@ -58,7 +58,7 @@ class Game {
         } //cierro imprimirmapa
 
     random(min, max) {
-        return Math.floor((Math.random() * (max - min + 1)) + min);
+        return Math.floor((Math.random() * (max - min +1)) + min);
     }
 
 
