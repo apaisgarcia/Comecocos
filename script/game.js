@@ -1,40 +1,48 @@
 
-const ROWS=4;
-const COLUMNS=4;
+const ROWS=8;
+const COLUMNS=11;
 const SIZE_IMAGE=32;
 
 class Game {
 
-    constructor(rowsGame,columnGame) {
-        if (!arguments.length) {
+    constructor(filas,columnas) {
+        if (arguments.length === 0) {
             console.log("Game con cero argumentos");
             this.rowsGame = ROWS; /* O Puedo poner el número.. yo defino arriba la constante*/
             this.columnGame = COLUMNS;
             this.sizeImage = SIZE_IMAGE; //imagen
             //array bidimensional 0-> roca 1-> pasillo
             this.mapa = [
-                [0, 0, 0, 1],
-                [1, 0, 0, 0],
-                [0, 0, 1, 0],
-                [1, 0, 1, 1],
+                [0, 0, 0, 1,0,0,1,1,0, 0, 0,],
+                [1, 0, 0, 0,0,0,1,1,0, 0, 0,],
+                [0, 0, 1, 0,1,0,1,1,0, 1, 0,],
+                [1, 0, 1, 1,0,1,0,1,0, 0, 1,],
+                [0, 0, 0, 1,0,0,0,0,0, 0, 0,],
+                [1, 0, 0, 0,1,0,1,1,0, 1, 0,],
+                [0, 0, 1, 0,0,0,0,1,0, 0, 1,],
+                [1, 0, 1, 1,0,0,0,1,0, 0, 0,],
             ];
         } else if (arguments.length === 2) {
-            console.log("Game con dos argumentos");
-            this.rowsGame = rowsGame;
-            this.columnGame = columnGame;
+           // console.log("Game con dos argumentos");
+            this.rowsGame = filas;
+            this.columnGame = columnas;
             this.sizeImage = SIZE_IMAGE;
             this.mapa =[];
-            for (let i = 0; i < rowsGame; i++) {
+            let i,j;
+            for (i = 0; i < filas; i++) {
                 let fila =[];
-                for (let j = 0; j < columnGame; j++) {
+                for (j = 0; j < columnas; j++) {
 
-                    let num =Math.round( Math.random(0,1)*3); // numero aleatorio y redondeando (entre 0 y 3) sino aparecen muchas rocas
-                    console.log("Numero aleatorio asigandao; ", num);
+                    let num =Math.round( Math.random(0,1)*1); // numero aleatorio y redondeando (entre 0 y 3) sino aparecen muchas rocas
+                    //console.log("Numero aleatorio asigandao; ", num);
                     fila.push(num);
                 } //cierro j
                 this.mapa.push(fila);
             }//cierro i
-            this.imprimirMapa();
+            console.log('i', i);
+            console.log('j', j);
+
+           // this.imprimirMapa();
 
 
         } else {

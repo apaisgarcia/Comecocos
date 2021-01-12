@@ -4,7 +4,11 @@ class Roca extends Gameobject
         super(x,y);
     }
 
- show(p) {
+ /*show() {
+        image(imgRoca,this.coordX,this.coordY);
+ }*/
+    showinstanceMode(p, imgRoca) {
         p.image(imgRoca,this.coordX,this.coordY);
- }
+    }
+
 }

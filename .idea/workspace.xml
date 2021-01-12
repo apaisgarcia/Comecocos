@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d267e999-3e61-45ac-8cba-d4cf22768f97" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/script/game.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/script/gameobject.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/script/roca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/comida.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script/comida.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/roca.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/roca.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/Mapa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/roca.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/roca.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/sketch.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,14 +35,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/script" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
     <property name="settings.editor.selected.configurable" value="liveEdit" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/script" />
       <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$/script" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
@@ -86,7 +87,12 @@
       <workItem from="1607964079543" duration="7450000" />
       <workItem from="1608214270264" duration="8449000" />
       <workItem from="1608311711224" duration="3638000" />
-      <workItem from="1609863358803" duration="243000" />
+      <workItem from="1609863358803" duration="2029000" />
+      <workItem from="1609865668625" duration="248000" />
+      <workItem from="1610361509668" duration="5009000" />
+      <workItem from="1610385366729" duration="6119000" />
+      <workItem from="1610445343548" duration="165000" />
+      <workItem from="1610446007109" duration="5381000" />
     </task>
     <task id="LOCAL-00001" summary="añadimos estructura básica">
       <created>1607707279785</created>
@@ -123,7 +129,28 @@
       <option name="project" value="LOCAL" />
       <updated>1607963783249</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="avance en clase roca.js y cambios varios en todo el código">
+      <created>1609863773327</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1609863773327</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Modificaciones en index, roca y sketch realizado mycontainer (div)">
+      <created>1610364521763</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1610364521763</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Camibos en game.js y sketch.js (pantalla juego aleatorio)">
+      <created>1610366523738</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1610366523738</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,7 +172,11 @@
     <MESSAGE value="añadimos estructura básica" />
     <MESSAGE value="Creación clase Mapa.js y midificaciones en sketch.js" />
     <MESSAGE value="modificamos la clase mapa" />
-    <option name="LAST_COMMIT_MESSAGE" value="modificamos la clase mapa" />
+    <MESSAGE value="avance en clase roca.js y cambios varios en todo el código" />
+    <MESSAGE value="Modificaciones en index, roca y sketch realizado mycontainer (div)" />
+    <MESSAGE value="Camibos en game.js y sketch.js (pantalla juego aleatorio)" />
+    <MESSAGE value="Cambio gráficos (temporales) y cambio a juego fijo  .." />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambio gráficos (temporales) y cambio a juego fijo  .." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
