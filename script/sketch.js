@@ -15,7 +15,7 @@ const s = (p) => {
         imgPacman = p.loadImage("images/pacman32.png");
         imgRoca = p.loadImage("images/roca.jpg");
         imgComida = p.loadImage("images/comida.jpg");
-
+        console.log("estoy en preload");
     }
 
 
