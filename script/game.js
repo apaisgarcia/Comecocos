@@ -23,7 +23,7 @@ class Game {
                 [1, 0, 1, 1,0,0,0,1,0, 0, 0,],
             ];
         } else if (arguments.length === 2) {
-           // console.log("Game con dos argumentos");
+            // console.log("Game con dos argumentos");
             this.rowsGame = filas;
             this.columnGame = columnas;
             this.sizeImage = SIZE_IMAGE;
@@ -42,7 +42,7 @@ class Game {
             console.log('i', i);
             console.log('j', j);
 
-           // this.imprimirMapa();
+            // this.imprimirMapa();
 
 
         } else {
@@ -50,20 +50,20 @@ class Game {
 
         }
     }//cierro constructor
-        imprimirMapa()
-        {
+    imprimirMapa()
+    {
+        console.log("[");
+        for (let i = 0; i < this.mapa.length; i++) { //entro en i y j
             console.log("[");
-            for (let i = 0; i < this.mapa.length; i++) { //entro en i y j
-                console.log("[");
-                for (let j = 0; j < this.mapa.length; j++) {
-                    let str = this.mapa[i][j] + ",";
-                    console.log(str);
+            for (let j = 0; j < this.mapa.length; j++) {
+                let str = this.mapa[i][j] + ",";
+                console.log(str);
 
-                }//cierro j
-                console.log("]");
-            }// cierro i
+            }//cierro j
             console.log("]");
-        } //cierro imprimirmapa
+        }// cierro i
+        console.log("]");
+    } //cierro imprimirmapa
 
     random(min, max) {
         return Math.floor((Math.random() * (max - min +1)) + min);
