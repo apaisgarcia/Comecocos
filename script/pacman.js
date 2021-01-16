@@ -6,7 +6,7 @@ class Pacman extends Gameobject
 
         this.lives=3; //esto son las vidas
         this.score=0; //son las vidas
-
+        //este es el constructor
 
     }
 
