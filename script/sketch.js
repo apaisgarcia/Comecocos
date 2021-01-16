@@ -8,21 +8,22 @@ const s = (p) => {
     var arrayRocasMapa = [];
     var arrayComidaMapa = []; // esto es como un new array
     var myJuego = new Game(); // si hago yo el array
-    var myJuego2 = new Game(18, 25); //aray aleatorio
+   // var myJuego2 = new Game(18, 25); //aray aleatorio
     var myPacman = new Pacman(32, 64);
 
-    p.preload = function () { // cargar antes de comenzar img = loadImage("images/pacman32.png");k
+    p.preload = function () {
         imgPacman = p.loadImage("images/pacman32.png");
-        //console.log(imgPacman);
-
         imgRoca = p.loadImage("images/roca.jpg");
-        imgComida = p.loadImage("images/comida.jpg")
+        imgComida = p.loadImage("images/comida.jpg");
+        console.log("estoy en preload");
     }
 
-    p.setup = function () { //crear la pantalla
-        console.log("estoy en draw");
-        p.createCanvas(COLUMNS * SIZE_IMAGE, ROWS * SIZE_IMAGE);
-        // p.createCanvas(myJuego.columnGame*myJuego.sizeImage, myJuego.rowsGame*myJuego.sizeImage); // ancho y alto (el orden)
+
+    p.setup = function () {
+        console.log("estoy en setup");
+
+        //p.createCanvas(COLUMNS * SIZE_IMAGE, ROWS * SIZE_IMAGE);
+        p.createCanvas(myJuego.columnGame*myJuego.sizeImage, myJuego.rowsGame*myJuego.sizeImage); // ancho y alto (el orden)
         // console.log("Filas :", myJuego.mapa.length);
 
         for (let i = 0; i < myJuego.mapa.length; i++) { //entro en i y j
@@ -34,14 +35,14 @@ const s = (p) => {
                     arrayRocasMapa.push(new Roca(myJuego.sizeImage * j, myJuego.sizeImage * i));
 
                 } else {
-                    // console.log("No hay roca");
+                    console.log("No hay roca");
                 }
                 if (myJuego.mapa[i][j] === 0) {
 
                     arrayComidaMapa.push(new Comida(myJuego.sizeImage * j, myJuego.sizeImage * i));
 
                 } else {
-                    // console.log("No hay comida");
+                    console.log("No hay comida");
                 }
 
             }//cierro j
@@ -52,12 +53,12 @@ const s = (p) => {
     }
 
 
-    p.draw = function () { //
+    p.draw = function () {
 
 
         // clear(); // le quita el rastro
         p.background(15);
-       // console.log("estoy en draw");
+         console.log("estoy en draw");
 
         for (let i = 0; i < arrayRocasMapa.length; i++) {
 
@@ -75,6 +76,7 @@ const s = (p) => {
         if (p.keyCode === p.RIGHT_ARROW) {
             myPacman.moveRight();
             console.log("flecha drch presionada");
+
         }
         if (p.keyCode === p.LEFT_ARROW) {
             myPacman.moveLeft();
@@ -82,6 +84,7 @@ const s = (p) => {
         }
         if (p.keyCode === p.DOWN_ARROW) {
             myPacman.moveDown();
+
         }
         if (p.keyCode === p.UP_ARROW) {
             myPacman.moveUp();

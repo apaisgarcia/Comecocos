@@ -13,17 +13,18 @@ class Game {
             this.sizeImage = SIZE_IMAGE; //imagen
             //array bidimensional 0-> roca 1-> pasillo
             this.mapa = [
-                [0, 0, 0, 1,0,0,1,1,0, 0, 0,],
-                [1, 0, 0, 0,0,0,0,0,0, 0, 0,],
-                [0, 0, 1, 0,1,0,1,1,0, 1, 0,],
-                [1, 0, 1, 1,0,1,0,1,0, 0, 1,],
-                [0, 0, 0, 1,0,0,0,0,0, 0, 0,],
-                [1, 0, 0, 0,1,0,1,1,0, 1, 0,],
-                [0, 0, 1, 0,0,0,0,1,0, 0, 1,],
-                [1, 0, 1, 1,0,0,0,1,0, 0, 0,],
+                [0, 0, 0, 1,0,0,1,1,0, 0, 0],
+                [1, 0, 0, 0,0,0,0,0,0, 0, 0],
+                [0, 0, 1, 0,1,0,1,1,0, 1, 0],
+                [1, 0, 1, 1,0,1,0,1,0, 0, 1],
+                [0, 0, 0, 1,0,0,0,0,0, 0, 0],
+                [1, 0, 0, 0,1,0,1,1,0, 1, 0],
+                [0, 0, 1, 0,0,0,0,1,0, 0, 1],
+                [1, 0, 1, 1,0,0,0,1,0, 0, 0],
             ];
+
         } else if (arguments.length === 2) {
-            // console.log("Game con dos argumentos");
+             console.log("Game con dos argumentos");
             this.rowsGame = filas;
             this.columnGame = columnas;
             this.sizeImage = SIZE_IMAGE;
