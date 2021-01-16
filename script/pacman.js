@@ -20,7 +20,7 @@ class Pacman extends Gameobject
 
 //keypresed es la funcion para mover con la flecha
 
-    moveRight(){
+   moveRight(){
 
             this.coordX = this.coordX + speed;
             console.log("avanzo derecha", this.coordX);
@@ -44,5 +44,5 @@ class Pacman extends Gameobject
     }
     moveUp(){ //mover arriba
         this.coordY=this.coordY-speed;
-    }
+    }s
 }
