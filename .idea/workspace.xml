@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d267e999-3e61-45ac-8cba-d4cf22768f97" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/comida.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/script/comida.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/roca.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/roca.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/roca.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/roca.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/sketch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/pacman.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/pacman.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610366523738</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="movimiento pacman">
+      <created>1610811951784</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1610811951784</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +178,8 @@
     <MESSAGE value="Modificaciones en index, roca y sketch realizado mycontainer (div)" />
     <MESSAGE value="Camibos en game.js y sketch.js (pantalla juego aleatorio)" />
     <MESSAGE value="Cambio gráficos (temporales) y cambio a juego fijo  .." />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambio gráficos (temporales) y cambio a juego fijo  .." />
+    <MESSAGE value="movimiento pacman" />
+    <option name="LAST_COMMIT_MESSAGE" value="movimiento pacman" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
