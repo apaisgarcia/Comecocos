@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d267e999-3e61-45ac-8cba-d4cf22768f97" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/pacman.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/pacman.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/sketch.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +21,19 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1lTPlnW1P1RiVL7ut4Va2ld4jJU" />
@@ -50,8 +67,8 @@
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.index.html" />
-      <item itemvalue="Node.js.index.js" />
       <item itemvalue="Node.js.sketch.js" />
+      <item itemvalue="Node.js.index.js" />
     </list>
     <recent_temporary>
       <list>
@@ -86,6 +103,10 @@
       <workItem from="1610385366729" duration="6119000" />
       <workItem from="1610445343548" duration="165000" />
       <workItem from="1610446007109" duration="5381000" />
+      <workItem from="1610822832105" duration="482000" />
+      <workItem from="1610990196589" duration="6180000" />
+      <workItem from="1611241123065" duration="6888000" />
+      <workItem from="1611324643791" duration="3054000" />
     </task>
     <task id="LOCAL-00001" summary="añadimos estructura básica">
       <created>1607707279785</created>
@@ -157,11 +178,35 @@
       <option name="project" value="LOCAL" />
       <updated>1610812531091</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="modificado clase pacman">
+      <created>1610822512255</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1610822512255</updated>
+    </task>
+    <task id="LOCAL-00012" summary="modificar index">
+      <created>1610822625479</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1610822625479</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -184,7 +229,8 @@
     <MESSAGE value="Camibos en game.js y sketch.js (pantalla juego aleatorio)" />
     <MESSAGE value="Cambio gráficos (temporales) y cambio a juego fijo  .." />
     <MESSAGE value="movimiento pacman" />
-    <option name="LAST_COMMIT_MESSAGE" value="movimiento pacman" />
+    <MESSAGE value="modificar index" />
+    <option name="LAST_COMMIT_MESSAGE" value="modificar index" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
