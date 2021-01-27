@@ -16,12 +16,18 @@ const s = (p) => {
     var myPacman = new Pacman(32, 64);
 
     p.preload = function () {
-        imgPacman = p.loadImage("images/pacman32.png");
-        imgPacman4= p.loadImage("images/pacman32abajo.png");
-        imgPacman3 = p.loadImage("images/pacman32arriba.png");
-        imgPacman2 = p.loadImage("images/pacman32izq.png");
-        imgRoca = p.loadImage("images/roca.jpg");
-        imgComida = p.loadImage("images/comida.jpg");
+        try {
+            imgPacman = p.loadImage("images/pacman32.png");
+            imgPacman4 = p.loadImage("images/pacman32abajo.png");
+            imgPacman3 = p.loadImage("images/pacman32arriba.png");
+            imgPacman2 = p.loadImage("images/pacman32izq.png");
+            imgRoca = p.loadImage("images/roca.png");
+            imgComida = p.loadImage("images/comida.png");
+
+        }catch (error){
+            console.error("No se pudieron cargar las imágenes");
+        }
+
        // console.log("estoy en preload");
     }
 
@@ -175,9 +181,7 @@ function moverPacman ()
              //Derecha
                      if ((myPacman.coordX + myPacman.speed) >= (myJuego.columnGame * myJuego.sizeImage)) {
 
-                         console.log("me paso en el eje derecho");
-                         console.log("valor 1 :", myPacman.coordX + myPacman.speed);
-                         console.log("valor 2", myJuego.columnGame * myJuego.sizeImage);
+
                      } else if ((myPacman.coordX + myPacman.speed) < 0) {
                          console.log("me paso en el eje izquierda");
                      } else {
