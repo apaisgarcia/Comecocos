@@ -8,8 +8,10 @@ const s = (p) => {
     var imgPacman2;
     var imgPacman3;
     var imgPacman4;
+    var imgCerezas;
     var arrayRocasMapa = [];
-    var arrayComidaMapa = []; // esto es como un new array
+    var arrayComidaMapa = [];
+    var arrayCerezasMapa=[]; // esto es como un new array
 
     var myJuego = new Game(); // si hago yo el array
    // var myJuego2 = new Game(18, 25); //aray aleatorio
@@ -23,6 +25,7 @@ const s = (p) => {
             imgPacman2 = p.loadImage("images/pacman32izq.png");
             imgRoca = p.loadImage("images/roca.png");
             imgComida = p.loadImage("images/comida.png");
+            imgCerezas= p.loadImage("images/cerezas.png");
 
         }catch (error){
             console.error("No se pudieron cargar las imágenes");
@@ -55,11 +58,15 @@ const s = (p) => {
 
                 } else {
                    // console.log("No hay comida");
-                }
+                }if (myJuego.mapa[i][j] === 2) {
 
+                    arrayCerezasMapa.push(new Cerezas(myJuego.sizeImage * j, myJuego.sizeImage * i));
+
+                } else {
+                    // console.log("No hay cerezas");
+                }
             }//cierro j
         }// cierro i
-
     }
 
 
@@ -71,12 +78,43 @@ const s = (p) => {
 
             arrayRocasMapa[i].showinstanceMode(p, imgRoca);
         }
+
         for (let s = 0; s < arrayComidaMapa.length; s++) {
 
             arrayComidaMapa[s].showinstanceMode(p, imgComida);
         }
+        for (let r = 0; r < arrayCerezasMapa.length; r++) {
 
+            arrayCerezasMapa[r].showinstanceMode(p, imgCerezas);
+        }
+        for(let x=0; x < arrayRocasMapa.length;x++){
+            myPacman.testCollide(p,arrayRocasMapa[x]);
+            //console.log ("estoy en array Rocas");
+        }
+        for(let w=0; w< arrayComidaMapa.length;w++) {
+            if (myPacman.testeatfood(p, arrayComidaMapa[w])) {
+                arrayComidaMapa.splice(w, 1);
+
+                myPacman.score = myPacman.score + arrayComidaMapa[w].score;
+                console.log("Puntuacion", myPacman.score);
+
+
+            }
+
+        }
+
+        for(let t=0; t < arrayCerezasMapa.length;t++){
+            if(myPacman.testeatCereza(p,arrayCerezasMapa[t])){
+                arrayCerezasMapa.splice(t,1);
+                myPacman.score= myPacman.score + arrayCerezasMapa[t].score;
+                console.log("Puntuación con cerezas",myPacman.score);
+            }
+
+
+
+        }
         direccionPacman(); //imagen del pacman
+
 
 
 

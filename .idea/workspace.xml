@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d267e999-3e61-45ac-8cba-d4cf22768f97" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/html/ayuda.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/informacionAutor.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/informacionNavegador.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/comida.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/cerezas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script/cerezas.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/comida.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/comida.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/comida.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/pacman.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/pacman.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/sketch.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -119,7 +118,18 @@
       <workItem from="1611324643791" duration="3054000" />
       <workItem from="1611573188092" duration="310000" />
       <workItem from="1611595750620" duration="5256000" />
-      <workItem from="1611748265795" duration="1880000" />
+      <workItem from="1611748265795" duration="2531000" />
+      <workItem from="1611751469942" duration="69000" />
+      <workItem from="1611846100280" duration="435000" />
+      <workItem from="1611846683400" duration="3724000" />
+      <workItem from="1611932590896" duration="334000" />
+      <workItem from="1611940597384" duration="4060000" />
+      <workItem from="1611945219206" duration="107000" />
+      <workItem from="1611945577430" duration="1196000" />
+      <workItem from="1612000473403" duration="430000" />
+      <workItem from="1612000951551" duration="2100000" />
+      <workItem from="1612007151944" duration="30000" />
+      <workItem from="1612007344519" duration="2013000" />
     </task>
     <task id="LOCAL-00001" summary="añadimos estructura básica">
       <created>1607707279785</created>
@@ -212,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611573303963</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="modificación de las rocas y bolitas(comida)">
+      <created>1611750614019</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1611750614019</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,7 +268,8 @@
     <MESSAGE value="movimiento pacman" />
     <MESSAGE value="modificar index" />
     <MESSAGE value="movimiento de pacman y límites" />
-    <option name="LAST_COMMIT_MESSAGE" value="movimiento de pacman y límites" />
+    <MESSAGE value="modificación de las rocas y bolitas(comida)" />
+    <option name="LAST_COMMIT_MESSAGE" value="modificación de las rocas y bolitas(comida)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
