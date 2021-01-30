@@ -58,7 +58,8 @@ const s = (p) => {
 
                 } else {
                    // console.log("No hay comida");
-                }if (myJuego.mapa[i][j] === 2) {
+                }
+                if (myJuego.mapa[i][j] === 2) {
 
                     arrayCerezasMapa.push(new Cerezas(myJuego.sizeImage * j, myJuego.sizeImage * i));
 
@@ -103,7 +104,7 @@ const s = (p) => {
 
         }
 
-        for(let t=0; t < arrayCerezasMapa.length;t++){
+       for(let t=0; t < arrayCerezasMapa.length;t++){
             if(myPacman.testeatCereza(p,arrayCerezasMapa[t])){
                 arrayCerezasMapa.splice(t,1);
              //   myPacman.score= myPacman.score + arrayCerezasMapa[t].score
