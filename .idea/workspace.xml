@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d267e999-3e61-45ac-8cba-d4cf22768f97" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/cerezas.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/script/cerezas.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/comida.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/comida.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/pacman.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/pacman.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/sketch.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,7 +122,7 @@
       <workItem from="1612000473403" duration="430000" />
       <workItem from="1612000951551" duration="2100000" />
       <workItem from="1612007151944" duration="30000" />
-      <workItem from="1612007344519" duration="2013000" />
+      <workItem from="1612007344519" duration="2553000" />
     </task>
     <task id="LOCAL-00001" summary="añadimos estructura básica">
       <created>1607707279785</created>
@@ -229,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611750614019</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Añado cerezas y movimiento del pacman">
+      <created>1612009540766</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1612009540766</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +269,8 @@
     <MESSAGE value="modificar index" />
     <MESSAGE value="movimiento de pacman y límites" />
     <MESSAGE value="modificación de las rocas y bolitas(comida)" />
-    <option name="LAST_COMMIT_MESSAGE" value="modificación de las rocas y bolitas(comida)" />
+    <MESSAGE value="Añado cerezas y movimiento del pacman" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añado cerezas y movimiento del pacman" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
