@@ -18,7 +18,7 @@ const s = (p) => {
     var myPacman = new Pacman(32, 64);
 
     p.preload = function () {
-        try {
+
             imgPacman = p.loadImage("images/pacman32.png");
             imgPacman4 = p.loadImage("images/pacman32abajo.png");
             imgPacman3 = p.loadImage("images/pacman32arriba.png");
@@ -27,9 +27,7 @@ const s = (p) => {
             imgComida = p.loadImage("images/comida.png");
             imgCerezas= p.loadImage("images/cerezas.png");
 
-        }catch (error){
-            console.error("No se pudieron cargar las imágenes");
-        }
+
 
        // console.log("estoy en preload");
     }
@@ -64,7 +62,7 @@ const s = (p) => {
                     arrayCerezasMapa.push(new Cerezas(myJuego.sizeImage * j, myJuego.sizeImage * i));
 
                 } else {
-                    // console.log("No hay cerezas");
+                     console.log("No hay cerezas");
                 }
             }//cierro j
         }// cierro i
@@ -107,7 +105,7 @@ const s = (p) => {
        for(let t=0; t < arrayCerezasMapa.length;t++){
             if(myPacman.testeatCereza(p,arrayCerezasMapa[t])){
                 arrayCerezasMapa.splice(t,1);
-             //   myPacman.score= myPacman.score + arrayCerezasMapa[t].score
+               myPacman.score= myPacman.score + arrayCerezasMapa[t].score
                 console.log("Puntuación con cerezas",myPacman.score);
             }
 
