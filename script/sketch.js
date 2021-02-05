@@ -1,5 +1,6 @@
 
 const s = (p) => {
+    const HEIGHT_TEXT=100;
     var pacmanprueba=new Pacman(0,0);
 
     var imgRoca;
@@ -28,7 +29,6 @@ const s = (p) => {
             imgCerezas= p.loadImage("images/cerezas.png");
 
 
-
        // console.log("estoy en preload");
     }
 
@@ -36,7 +36,7 @@ const s = (p) => {
        // console.log("estoy en setup");
 
         //p.createCanvas(COLUMNS * SIZE_IMAGE, ROWS * SIZE_IMAGE);
-        p.createCanvas(myJuego.columnGame*myJuego.sizeImage, myJuego.rowsGame*myJuego.sizeImage); // ancho y alto (el orden)
+        p.createCanvas(myJuego.columnGame*myJuego.sizeImage, myJuego.rowsGame*myJuego.sizeImage+HEIGHT_TEXT); // ancho y alto (el orden)
         // console.log("Filas :", myJuego.mapa.length);
     myPacman.direction =1;
         for (let i = 0; i < myJuego.mapa.length; i++) { //entro en i y j
@@ -66,6 +66,7 @@ const s = (p) => {
                 }
             }//cierro j
         }// cierro i
+
     }
 
 
@@ -92,79 +93,88 @@ const s = (p) => {
         }
         for(let w=0; w< arrayComidaMapa.length;w++) {
             if (myPacman.testeatfood(p, arrayComidaMapa[w])) {
+                myPacman.score = myPacman.score + arrayComidaMapa[w].score;
                 arrayComidaMapa.splice(w, 1);
 
-                myPacman.score = myPacman.score + arrayComidaMapa[w].score;
                 console.log("Puntuacion", myPacman.score);
-
-
             }
-
         }
-
        for(let t=0; t < arrayCerezasMapa.length;t++){
             if(myPacman.testeatCereza(p,arrayCerezasMapa[t])){
+                myPacman.score= myPacman.score + arrayCerezasMapa[t].score;
                 arrayCerezasMapa.splice(t,1);
-               myPacman.score= myPacman.score + arrayCerezasMapa[t].score
                 console.log("Puntuación con cerezas",myPacman.score);
             }
 
-
+        console.log("Puntuacion Final "+ myPacman.score);
 
         }
         direccionPacman(); //imagen del pacman
-
-
+        pantallaPuntuar();
+        comprobarVictoriaCerezas();
 
 
 
     }//CIERRE DRAW
+    function pantallaPuntuar (){
+
+        p.textSize(32);
+        p.text("Puntuación",200,550);
+        p.text(myPacman.score,250,600);
+        p.fill(0, 102, 153);
+    }
+    function comprobarVictoriaCerezas(){
+
+        if( arrayCerezasMapa.length===0){
+            console.log("No hay cerezas");
+        }
+    }
 
     p.keyPressed = function () {
-         let direccion = 0;
-         pacmanprueba.coordX=myPacman.coordX;
-         pacmanprueba.coordY=myPacman.coordY;
-         pacmanprueba.speed=myPacman.speed;
-         pacmanprueba.direction=myPacman.direction;
-            switch (p.keyCode){
-                case p.RIGHT_ARROW:
-                    pacmanprueba.direction=1;
-                    pacmanprueba.coordX=pacmanprueba.coordX+pacmanprueba.speed;
-                    console.log("flecha drch presionada");
-                    break;
-                case p.LEFT_ARROW:
-                    pacmanprueba.direction=2;
-                    pacmanprueba.coordX=pacmanprueba.coordX-pacmanprueba.speed;
-                    console.log("flecha izq presionada");
-                    break;
-                case p.UP_ARROW:
-                    pacmanprueba.direction=3;
-                    pacmanprueba.coordY=pacmanprueba.coordY-pacmanprueba.speed;
+        let direccion = 0;
+        pacmanprueba.coordX = myPacman.coordX;
+        pacmanprueba.coordY = myPacman.coordY;
+        pacmanprueba.speed = myPacman.speed;
+        pacmanprueba.direction = myPacman.direction;
+        switch (p.keyCode) {
+            case p.RIGHT_ARROW:
+                pacmanprueba.direction = 1;
+                pacmanprueba.coordX = pacmanprueba.coordX + pacmanprueba.speed;
+                console.log("flecha drch presionada");
+                break;
+            case p.LEFT_ARROW:
+                pacmanprueba.direction = 2;
+                pacmanprueba.coordX = pacmanprueba.coordX - pacmanprueba.speed;
+                console.log("flecha izq presionada");
+                break;
+            case p.UP_ARROW:
+                pacmanprueba.direction = 3;
+                pacmanprueba.coordY = pacmanprueba.coordY - pacmanprueba.speed;
 
-                    console.log("flecha arriba presionada");
-                    break;
-                case p.DOWN_ARROW:
-                    pacmanprueba.direction=4;
-                    pacmanprueba.coordY=pacmanprueba.coordY+pacmanprueba.speed;
-                    //  moverPacman();
-                    console.log("flecha abajo presionada");
-                    break;
+                console.log("flecha arriba presionada");
+                break;
+            case p.DOWN_ARROW:
+                pacmanprueba.direction = 4;
+                pacmanprueba.coordY = pacmanprueba.coordY + pacmanprueba.speed;
+                //  moverPacman();
+                console.log("flecha abajo presionada");
+                break;
 
-            }
+        }
 
-     let resultado=comprobarpacman(pacmanprueba);
-        if(resultado===0){
+        let resultado = comprobarpacman(pacmanprueba);
+        if (resultado === 0) {
             console.log("correcto");
-           // myPacman=pacmanprueba;
-            myPacman.coordX=pacmanprueba.coordX;
+            // myPacman=pacmanprueba;
+            myPacman.coordX = pacmanprueba.coordX;
 
-            myPacman.coordY=pacmanprueba.coordY;
-            myPacman.speed=pacmanprueba.speed;
-            myPacman.direction=pacmanprueba.direction;
-        }else {
+            myPacman.coordY = pacmanprueba.coordY;
+            myPacman.speed = pacmanprueba.speed;
+            myPacman.direction = pacmanprueba.direction;
+        } else {
             console.log("incorrecto");
         }
-        console.log("resultado :" ,resultado);
+        console.log("resultado :", resultado);
 
     }
     function comprobarpacman (pc) {
@@ -172,15 +182,14 @@ const s = (p) => {
         if ((pc.coordX  >= 0 ) && (pc.coordX < myJuego.columnGame* myJuego.sizeImage)) {
 
             console.log("x correcta");
-            if((pc.coordY  >= 0 ) && (pc.coordY < myJuego.rowsGame* myJuego.sizeImage)) {
+            if ((pc.coordY >= 0) && (pc.coordY < myJuego.rowsGame * myJuego.sizeImage)) {
                 console.log(" y correcta");
                 return 0;
-            }
-            else {
+            } else {
                 console.log(" error en las y");
                 return 1;
             }
-        } else {
+        }else {
             console.log(" incorrecto x");
             return 2;
 

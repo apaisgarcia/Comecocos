@@ -1,5 +1,5 @@
 
-const CEREZASCORE=7;
+const CEREZASCORE=10;
 class Cerezas extends Gameobject {
 
     constructor(x, y) {
