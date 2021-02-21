@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d267e999-3e61-45ac-8cba-d4cf22768f97" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/script/propiedades.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/cerezas.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/cerezas.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/game.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/sketch.js" afterDir="false" />
     </list>
@@ -139,6 +135,14 @@
       <workItem from="1612010683230" duration="630000" />
       <workItem from="1612199710357" duration="6374000" />
       <workItem from="1612451256884" duration="6430000" />
+      <workItem from="1612521068938" duration="1054000" />
+      <workItem from="1612523404230" duration="1374000" />
+      <workItem from="1612804803519" duration="243000" />
+      <workItem from="1612805435781" duration="5556000" />
+      <workItem from="1613660290155" duration="528000" />
+      <workItem from="1613660925746" duration="7062000" />
+      <workItem from="1613754814377" duration="4568000" />
+      <workItem from="1613934363913" duration="370000" />
     </task>
     <task id="LOCAL-00001" summary="añadimos estructura básica">
       <created>1607707279785</created>
@@ -259,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612010896623</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="contador de puntos realizado">
+      <created>1612521201590</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1612521201590</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,7 +312,8 @@
     <MESSAGE value="modificación de las rocas y bolitas(comida)" />
     <MESSAGE value="Añado cerezas y movimiento del pacman" />
     <MESSAGE value="funcionando pacman, comida,cerezas" />
-    <option name="LAST_COMMIT_MESSAGE" value="funcionando pacman, comida,cerezas" />
+    <MESSAGE value="contador de puntos realizado" />
+    <option name="LAST_COMMIT_MESSAGE" value="contador de puntos realizado" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

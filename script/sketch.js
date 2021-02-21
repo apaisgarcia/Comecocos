@@ -1,7 +1,8 @@
 
 const s = (p) => {
-    const HEIGHT_TEXT=100;
-    var pacmanprueba=new Pacman(0,0);
+    const FRAMERATE = 30;
+    const HEIGHT_TEXT = 100;
+    var pacmanprueba = new Pacman(0, 0);
 
     var imgRoca;
     var imgComida;
@@ -12,60 +13,40 @@ const s = (p) => {
     var imgCerezas;
     var arrayRocasMapa = [];
     var arrayComidaMapa = [];
-    var arrayCerezasMapa=[]; // esto es como un new array
+    var arrayCerezasMapa = []; // esto es como un new array
+    var timer = 5.0;
+
 
     var myJuego = new Game(); // si hago yo el array
-   // var myJuego2 = new Game(18, 25); //aray aleatorio
+    // var myJuego2 = new Game(18, 25); //aray aleatorio
     var myPacman = new Pacman(32, 64);
 
     p.preload = function () {
 
-            imgPacman = p.loadImage("images/pacman32.png");
-            imgPacman4 = p.loadImage("images/pacman32abajo.png");
-            imgPacman3 = p.loadImage("images/pacman32arriba.png");
-            imgPacman2 = p.loadImage("images/pacman32izq.png");
-            imgRoca = p.loadImage("images/roca.png");
-            imgComida = p.loadImage("images/comida.png");
-            imgCerezas= p.loadImage("images/cerezas.png");
+        imgPacman = p.loadImage("images/pacman32.png");
+        imgPacman4 = p.loadImage("images/pacman32abajo.png");
+        imgPacman3 = p.loadImage("images/pacman32arriba.png");
+        imgPacman2 = p.loadImage("images/pacman32izq.png");
+        imgRoca = p.loadImage("images/roca.png");
+        imgComida = p.loadImage("images/comida.png");
+        imgCerezas = p.loadImage("images/cerezas.png");
 
 
-       // console.log("estoy en preload");
+        // console.log("estoy en preload");
     }
 
+
+
     p.setup = function () {
-       // console.log("estoy en setup");
+        // console.log("estoy en setup");
 
         //p.createCanvas(COLUMNS * SIZE_IMAGE, ROWS * SIZE_IMAGE);
-        p.createCanvas(myJuego.columnGame*myJuego.sizeImage, myJuego.rowsGame*myJuego.sizeImage+HEIGHT_TEXT); // ancho y alto (el orden)
+        p.createCanvas(myJuego.columnGame * myJuego.sizeImage, myJuego.rowsGame * myJuego.sizeImage + HEIGHT_TEXT); // ancho y alto (el orden)
         // console.log("Filas :", myJuego.mapa.length);
-    myPacman.direction =1;
-        for (let i = 0; i < myJuego.mapa.length; i++) { //entro en i y j
-            for (let j = 0; j < myJuego.mapa[i].length; j++) {
+        myPacman.direction = 1;
+        llenarMapa();
 
-                if (myJuego.mapa[i][j] === 1) {
-                    //  console.log("Añado roca en fila, ", i);
-                    // console.log("Añado roca en columna , ", j);
-                    arrayRocasMapa.push(new Roca(myJuego.sizeImage * j, myJuego.sizeImage * i));
-
-                } else {
-                   // console.log("No hay roca");
-                }
-                if (myJuego.mapa[i][j] === 0) {
-
-                    arrayComidaMapa.push(new Comida(myJuego.sizeImage * j, myJuego.sizeImage * i));
-
-                } else {
-                   // console.log("No hay comida");
-                }
-                if (myJuego.mapa[i][j] === 2) {
-
-                    arrayCerezasMapa.push(new Cerezas(myJuego.sizeImage * j, myJuego.sizeImage * i));
-
-                } else {
-                     console.log("No hay cerezas");
-                }
-            }//cierro j
-        }// cierro i
+        //  p.frameRate(FRAMERATE); //60
 
     }
 
@@ -87,11 +68,11 @@ const s = (p) => {
 
             arrayCerezasMapa[r].showinstanceMode(p, imgCerezas);
         }
-        for(let x=0; x < arrayRocasMapa.length;x++){
-            myPacman.testCollide(p,arrayRocasMapa[x]);
+        for (let x = 0; x < arrayRocasMapa.length; x++) {
+            myPacman.testCollide(p, arrayRocasMapa[x]);
             //console.log ("estoy en array Rocas");
         }
-        for(let w=0; w< arrayComidaMapa.length;w++) {
+        for (let w = 0; w < arrayComidaMapa.length; w++) {
             if (myPacman.testeatfood(p, arrayComidaMapa[w])) {
                 myPacman.score = myPacman.score + arrayComidaMapa[w].score;
                 arrayComidaMapa.splice(w, 1);
@@ -99,36 +80,122 @@ const s = (p) => {
                 console.log("Puntuacion", myPacman.score);
             }
         }
-       for(let t=0; t < arrayCerezasMapa.length;t++){
-            if(myPacman.testeatCereza(p,arrayCerezasMapa[t])){
-                myPacman.score= myPacman.score + arrayCerezasMapa[t].score;
-                arrayCerezasMapa.splice(t,1);
-                console.log("Puntuación con cerezas",myPacman.score);
+        for (let t = 0; t < arrayCerezasMapa.length; t++) {
+            if (myPacman.testeatCereza(p, arrayCerezasMapa[t])) {
+                myPacman.score = myPacman.score + arrayCerezasMapa[t].score;
+                arrayCerezasMapa.splice(t, 1);
+                // console.log("Puntuación con cerezas",myPacman.score);
             }
 
-        console.log("Puntuacion Final "+ myPacman.score);
+            console.log("Puntuacion Final " + myPacman.score);
 
         }
         direccionPacman(); //imagen del pacman
         pantallaPuntuar();
-        comprobarVictoriaCerezas();
+
+        if ((p.frameCount % 60 === 0) && timer >= 0) {
+            timer--;
+        }
+        comprobarDerrota();
+
+
+        comprobarVictoria();
 
 
 
     }//CIERRE DRAW
-    function pantallaPuntuar (){
+    function llenarMapa() {
+        for (let i = 0; i < myJuego.mapa.length; i++) { //entro en i y j
+            for (let j = 0; j < myJuego.mapa[i].length; j++) {
+
+                if (myJuego.mapa[i][j] === 1) {
+                    //  console.log("Añado roca en fila, ", i);
+                    // console.log("Añado roca en columna , ", j);
+                    arrayRocasMapa.push(new Roca(myJuego.sizeImage * j, myJuego.sizeImage * i));
+
+                } else {
+                    // console.log("No hay roca");
+                }
+                if (myJuego.mapa[i][j] === 0) {
+
+                    arrayComidaMapa.push(new Comida(myJuego.sizeImage * j, myJuego.sizeImage * i));
+
+                } else {
+                    // console.log("No hay comida");
+                }
+                if (myJuego.mapa[i][j] === 2) {
+
+                    arrayCerezasMapa.push(new Cerezas(myJuego.sizeImage * j, myJuego.sizeImage * i));
+
+                } else {
+                  //  console.log("No hay cerezas");
+                }
+            }//cierro j
+        }// cierro i
+    }
+
+    function pantallaPuntuar() {
 
         p.textSize(32);
-        p.text("Puntuación",200,550);
-        p.text(myPacman.score,250,600);
+        p.text("Score", 75, 550);
         p.fill(0, 102, 153);
+        p.text(myPacman.score, 270, 550);
+        p.fill(0, 102, 153);
+        p.text("Time:", 375, 550);
+        console.log("tiempo",timer);
+        let strtimer=timer.toFixed(2);
+       // console.log("tiempo str",strtimer);
+        p.text(timer, 550, 550);
+        p.fill(0, 102, 153);
+        p.text("Lives", 375, 600);
+        p.text(myPacman.lives, 475, 600);
     }
-    function comprobarVictoriaCerezas(){
 
-        if( arrayCerezasMapa.length===0){
-            console.log("No hay cerezas");
+    function comprobarVictoria() {
+
+        if (arrayCerezasMapa.length === 0 && arrayComidaMapa.length === 0 && myPacman.lives >= 0 && timer >= 0) {
+          //  console.log("Ganaste");
+            //p.noloop();
+            let opcion = confirm("FELICIDADES , HAS GANADO !!! ");
+            reiniciar();
+
+
         }
     }
+
+    function reiniciar() {
+
+        p.noLoop();
+        p.clear();
+        llenarMapa();
+        timer = 15;
+        myPacman.lives=3;
+        p.loop();
+
+
+
+    }
+
+    function comprobarDerrota() {
+        if (timer < 0) {
+
+
+            if(myPacman.lives>0){
+                myPacman.lives --;
+                let opcion = confirm("TE QUEDAN " + myPacman.lives + " VIDAS");
+                timer=5;
+
+            }
+            else{
+                let opcion2 = confirm("DERROTA FINAL !!! "+ myPacman.score);
+                reiniciar();
+            }
+
+            //reinicio(); // pacmancoor , llenar mapa (funcion arriba),tiempo máximo -z loop (arrancar juego)
+            // reiniciar();
+        }
+    }
+
 
     p.keyPressed = function () {
         let direccion = 0;
@@ -177,9 +244,10 @@ const s = (p) => {
         console.log("resultado :", resultado);
 
     }
-    function comprobarpacman (pc) {
 
-        if ((pc.coordX  >= 0 ) && (pc.coordX < myJuego.columnGame* myJuego.sizeImage)) {
+    function comprobarpacman(pc) {
+
+        if ((pc.coordX >= 0) && (pc.coordX < myJuego.columnGame * myJuego.sizeImage)) {
 
             console.log("x correcta");
             if ((pc.coordY >= 0) && (pc.coordY < myJuego.rowsGame * myJuego.sizeImage)) {
@@ -189,15 +257,16 @@ const s = (p) => {
                 console.log(" error en las y");
                 return 1;
             }
-        }else {
+        } else {
             console.log(" incorrecto x");
             return 2;
 
         }
 
-}
-    function direccionPacman(){  //imagen del pacman según la dirección
-        switch (myPacman.direction){ // dirección pacman imagen
+    }
+
+    function direccionPacman() {  //imagen del pacman según la dirección
+        switch (myPacman.direction) { // dirección pacman imagen
 
             case 1:
                 myPacman.showInstanceMode(p, imgPacman);
@@ -212,86 +281,8 @@ const s = (p) => {
                 myPacman.showInstanceMode(p, imgPacman4);
                 break;
         }
+
+
     }
-
-
-
-
-
-/*
-function moverPacman ()
-    {
-        switch (myPacman.direction)
-        {
-         case 1: {
-             //Derecha
-                     if ((myPacman.coordX + myPacman.speed) >= (myJuego.columnGame * myJuego.sizeImage)) {
-
-
-                     } else if ((myPacman.coordX + myPacman.speed) < 0) {
-                         console.log("me paso en el eje izquierda");
-                     } else {
-                         console.log("correcto");
-                         myPacman.moveRight();
-                         myPacman.showInstanceMode(p, imgPacman);
-
-                     }
-                     break;
-                 }
-
-         case 2: {
-             //Izquierda
-                     if ((myPacman.coordX - myPacman.speed) > (myJuego.columnGame * myJuego.sizeImage)) {
-
-                         console.log("me paso en el eje derecho");
-                     } else if ((myPacman.coordX - myPacman.speed) < 0) {
-                         console.log("me paso en el eje izquierda");
-                     } else {
-                         console.log("correcto");
-                         myPacman.moveLeft();
-                         myPacman.showInstanceMode(p, imgPacman);
-
-                     }
-                     break;
-                 }
-            case 3: {
-                //Mover arriba
-                if ((myPacman.coordY + myPacman.speed) <= myJuego.sizeImage) {
-
-                    console.log("me paso arriba");
-                } else if ((myPacman.coordY + myPacman.speed) < 0) {
-                    console.log("me paso abajo");
-                } else {
-                    console.log("correcto" ,myPacman.coordY);
-                    myPacman.moveUp();
-                    myPacman.showInstanceMode(p, imgPacman);
-
-                }
-                break;
-            }
-
-         case 4: {
-                //Mover abajo
-                if ((myPacman.coordY - myPacman.speed) < 0) {
-
-                    console.log("me paso ");
-                } else if ((myPacman.coordY+myPacman.speed) >= (myJuego.rowsGame*myJuego.sizeImage)) {
-                    console.log("me paso ");
-                } else {
-                    console.log("correcto abajo" ,myPacman.coordY);
-                    myPacman.moveDown();
-                    myPacman.showInstanceMode(p, imgPacman);
-
-                }
-                break;
-            }
-
-         default:
-            console.log("nada");
-
-        } //Acabo swith
-
-    }*/
 }
-
 var myp5 = new p5(s,'myContainer');
