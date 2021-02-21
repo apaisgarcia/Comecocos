@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d267e999-3e61-45ac-8cba-d4cf22768f97" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/script/autor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/sketch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +142,7 @@
       <workItem from="1613660290155" duration="528000" />
       <workItem from="1613660925746" duration="7062000" />
       <workItem from="1613754814377" duration="4568000" />
-      <workItem from="1613934363913" duration="370000" />
+      <workItem from="1613934363913" duration="3091000" />
     </task>
     <task id="LOCAL-00001" summary="añadimos estructura básica">
       <created>1607707279785</created>
@@ -270,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612521201590</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="creación del contador y vidas">
+      <created>1613934789406</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1613934789406</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +320,8 @@
     <MESSAGE value="Añado cerezas y movimiento del pacman" />
     <MESSAGE value="funcionando pacman, comida,cerezas" />
     <MESSAGE value="contador de puntos realizado" />
-    <option name="LAST_COMMIT_MESSAGE" value="contador de puntos realizado" />
+    <MESSAGE value="creación del contador y vidas" />
+    <option name="LAST_COMMIT_MESSAGE" value="creación del contador y vidas" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
