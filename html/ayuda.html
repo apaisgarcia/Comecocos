@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/normalised.css" type="text/css"/>
     <link rel="stylesheet" href="../css/style.css" type="text/css"/>
     <script type="text/javascript" src="../script/propiedades.js"></script>
-
+    <script type="text/javascript" src="../script/autor.js"></script>
 
 
 </head>
@@ -20,7 +20,7 @@
         <li><a href="../index.html">Inicio</a></li>
         <li><a href="../start.html">Juego</a></li>
         <li><a href="player.html">Configurar Usuario</a></li>
-        <li><a href=".">Ayuda</a></li>
+        <li><a href="ayuda.html">Ayuda</a></li>
         <li><a onclick="autor()">Información Autor</a></li>
         <li ><a onclick="propiedades()">Información Navegador</a></li>
     </ul>
@@ -35,6 +35,7 @@
         <br>
     </form>
     <div >
+        <br>
         <button id="estilo" onclick="pedirDatos()"> Configuración Prompt</button>
 
     </div>
@@ -43,13 +44,28 @@
             <h2>Funcionamiento del Juego</h2><br>
         </header>
 
-        <section> En el juego puedes ver :
+        <section>
+            <h4>Normas del Juego :</h4>
+
+            <p> Se deberán ulizar las flechas para moverse por la pantalla</p>
+            <p> Dispones de 3 niveles </p>
+
             <ul>
-                <li>Pacman</li>
-                <li>Comida (bolita)</li>
-                <li>Comida (cereza)</li>
-                <li> Rocas</li>
+                <p> Dependiendo del nivel tienes más tiempo:</p>
+                <li> 1: fácil : 40 segundos</li>
+                <li> 2: medio : 30 segundos</li>
+                <li> 3: alto : 20 segundos</li>
             </ul>
+
+            <p> Tienes 3 vidas </p>
+            <p> Puntuación</p>
+            <ul>
+                <li>Comida (bolita) : 5 puntos</li>
+                <li>Comida (cereza) : 10 puntos</li>
+                <p> Si tienes menos de 3 vidas y comes una cereza tendrás una vida más</p>
+
+            </ul>
+            <p> Deberás crear un Usuario con nivel para jugar</p>
         </section>
     </article>
 

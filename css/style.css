@@ -29,14 +29,15 @@ img{
   font-size: 15px;
   text-decoration-line: none;
   padding: 10px;
-  background-color: darkgrey;
-  color: #fff;
+  background-color:black;
+  color: cadetblue;
 
 
 }
+
 h3{
   text-align: center;
-  color:cadetblue;
+  color:peachpuff;
 }
 footer h3{
   text-align: center;
@@ -54,3 +55,11 @@ footer h3{
   height: 450px;
 }
 
+form{
+  border: 2px black solid;
+  border-radius: 10px;
+  width: 400px;
+  padding:15px;
+  text-align: center;
+  background-color: cadetblue;
+}
