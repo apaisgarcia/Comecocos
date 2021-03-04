@@ -14,6 +14,7 @@ class Game {
                     this.rowsGame = ROWS; /* O Puedo poner el número.. yo defino arriba la constante*/
                     this.columnGame = COLUMNS;
                     this.sizeImage = SIZE_IMAGE; //imagen
+                    this.dificulty=1;
                     //array bidimensional 0-> roca 1-> pasillo
                     this.mapa = [
                         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,1,1,1,1],

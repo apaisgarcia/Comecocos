@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d267e999-3e61-45ac-8cba-d4cf22768f97" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/script/autor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/player.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/indexbueno.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script/playersettings.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/ayuda.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/ayuda.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/propiedades.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/propiedades.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/sketch.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,12 +60,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/script" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/script" />
       <recent name="$PROJECT_DIR$/images" />
     </key>
@@ -142,7 +150,11 @@
       <workItem from="1613660290155" duration="528000" />
       <workItem from="1613660925746" duration="7062000" />
       <workItem from="1613754814377" duration="4568000" />
-      <workItem from="1613934363913" duration="3091000" />
+      <workItem from="1613934363913" duration="3666000" />
+      <workItem from="1614015426681" duration="5080000" />
+      <workItem from="1614267924243" duration="4384000" />
+      <workItem from="1614359762931" duration="6193000" />
+      <workItem from="1614618918431" duration="6728000" />
     </task>
     <task id="LOCAL-00001" summary="añadimos estructura básica">
       <created>1607707279785</created>
@@ -277,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613934789406</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Información sobre el autor">
+      <created>1613937599598</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1613937599598</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +340,8 @@
     <MESSAGE value="funcionando pacman, comida,cerezas" />
     <MESSAGE value="contador de puntos realizado" />
     <MESSAGE value="creación del contador y vidas" />
-    <option name="LAST_COMMIT_MESSAGE" value="creación del contador y vidas" />
+    <MESSAGE value="Información sobre el autor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Información sobre el autor" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

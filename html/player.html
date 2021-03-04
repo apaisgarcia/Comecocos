@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="keywords" content="html,cheatsheet"/>
+    <link rel="stylesheet" href="../css/normalised.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/style.css" type="text/css"/>
+    <script type="text/javascript" src="../script/propiedades.js"></script>
+    <script type="text/javascript" src="../script/autor.js"></script>
+    <script type="text/javascript" src="../script/playersettings.js"></script>
+
+    <title> Comecocos</title>
+</head>
+<body>
+<header>
+    <h1>Juego Pacman</h1>
+    <ul id="button">
+        <li><a href="../index.html">Inicio</a></li>
+
+        <li><a href="player.html">Configurar Usuario</a></li>
+        <li><a href="ayuda.html">Ayuda</a></li>
+        <li><a onclick="autor()">Información Autor</a></li>
+        <li ><a onclick="propiedades()">Información Navegador</a></li>
+    </ul>
+    <h1> PACMAN</h1>
+
+    <!--  <button onclick="dificultad(1);"> 1</button>
+          <button onclick="dificultad(2);"> 2</button> -->
+
+</header>
+<form action="index.html">
+    Nombre : <input type="text" id="nombreJugador" />
+
+    <br> <br> <br>
+    E-mail : <input type="text" id="mailJugador" />
+    <br>
+    <br>
+
+    <select id="dificultadJugador">
+
+        <option value="" >Elige tu Nivel</option>
+        <option value="1">Nivel 1</option>
+        <option value="2">Nivel 2</option>
+        <option value="3">Nivel 3</option>
+
+    </select>
+
+    <br> <br> <br>
+</form>
+<div >
+    <button id="estilo" onclick="usuario()"> Enviar</button>
+
+</div>
+<footer>
+    <h3>My Pacman 2021 @Alia Pais</h3>
+</footer>
+</body>
+</html>

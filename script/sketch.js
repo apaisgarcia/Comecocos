@@ -3,7 +3,6 @@ const s = (p) => {
     const FRAMERATE = 30;
     const HEIGHT_TEXT = 100;
     var pacmanprueba = new Pacman(0, 0);
-
     var imgRoca;
     var imgComida;
     var imgPacman;
@@ -14,7 +13,7 @@ const s = (p) => {
     var arrayRocasMapa = [];
     var arrayComidaMapa = [];
     var arrayCerezasMapa = []; // esto es como un new array
-    var timer = 5.0;
+    var timer=30;
 
 
     var myJuego = new Game(); // si hago yo el array
@@ -41,14 +40,33 @@ const s = (p) => {
         // console.log("estoy en setup");
 
         //p.createCanvas(COLUMNS * SIZE_IMAGE, ROWS * SIZE_IMAGE);
-        p.createCanvas(myJuego.columnGame * myJuego.sizeImage, myJuego.rowsGame * myJuego.sizeImage + HEIGHT_TEXT); // ancho y alto (el orden)
-        // console.log("Filas :", myJuego.mapa.length);
-        myPacman.direction = 1;
-        llenarMapa();
+        if (localStorage.getItem('nombreJugador') != null &&  localStorage.getItem('nombreJugador') != "" && localStorage.getItem('mailJugador') != null  && localStorage.getItem ('mailJugador') !=""){
+
+            permitirPartida=1;
+
+            p.createCanvas(myJuego.columnGame * myJuego.sizeImage, myJuego.rowsGame * myJuego.sizeImage + HEIGHT_TEXT); // ancho y alto (el orden)
+            // console.log("Filas :", myJuego.mapa.length);
+            myPacman.direction = 1;
+            llenarMapa();
+
+            dificultad(localStorage.getItem("dificultadJugador"));
+        }else{
+            permitirPartida=0;
+            alert(
+                " Debes configurar el Usuario \n"
+
+
+
+            );
+            console.log(" No usuario");
+            //p.noLoop();
+        }
+
 
         //  p.frameRate(FRAMERATE); //60
-
     }
+
+
 
 
     p.draw = function () {
@@ -84,6 +102,12 @@ const s = (p) => {
             if (myPacman.testeatCereza(p, arrayCerezasMapa[t])) {
                 myPacman.score = myPacman.score + arrayCerezasMapa[t].score;
                 arrayCerezasMapa.splice(t, 1);
+                if(myPacman.lives<3){ //doy una vida más si tienes menos de tres vidas
+                    myPacman.lives ++;
+
+                }
+
+
                 // console.log("Puntuación con cerezas",myPacman.score);
             }
 
@@ -138,7 +162,7 @@ const s = (p) => {
 
         p.textSize(32);
         p.text("Score", 75, 550);
-        p.fill(0, 102, 153);
+        p.fill('green');
         p.text(myPacman.score, 270, 550);
         p.fill(0, 102, 153);
         p.text("Time:", 375, 550);
@@ -146,7 +170,7 @@ const s = (p) => {
         let strtimer=timer.toFixed(2);
        // console.log("tiempo str",strtimer);
         p.text(timer, 550, 550);
-        p.fill(0, 102, 153);
+        p.fill('green');
         p.text("Lives", 375, 600);
         p.text(myPacman.lives, 475, 600);
     }
@@ -156,21 +180,36 @@ const s = (p) => {
         if (arrayCerezasMapa.length === 0 && arrayComidaMapa.length === 0 && myPacman.lives >= 0 && timer >= 0) {
           //  console.log("Ganaste");
             //p.noloop();
-            let opcion = confirm("FELICIDADES , HAS GANADO !!! ");
+            let opcion = confirm("FELICIDADES , HAS GANADO !!! \n" +"PUNTUACIÓN : "+ myPacman.score );
             reiniciar();
 
 
         }
     }
+    function dificultad (diff) {
 
+        switch ( diff) {
+            case 1:
+                timer = 40;
+                break;
+            case 2:
+                timer = 30;
+                break;
+            case 3:
+                timer = 20;
+                break;
+        }
+
+    }
     function reiniciar() {
 
         p.noLoop();
         p.clear();
         llenarMapa();
-        timer = 15;
+        timer = 30;
         myPacman.lives=3;
         p.loop();
+        myPacman.score=0;
 
 
 
@@ -183,12 +222,13 @@ const s = (p) => {
             if(myPacman.lives>0){
                 myPacman.lives --;
                 let opcion = confirm("TE QUEDAN " + myPacman.lives + " VIDAS");
-                timer=5;
+                timer=30;
 
             }
             else{
-                let opcion2 = confirm("DERROTA FINAL !!! "+ myPacman.score);
+                let opcion2 = confirm("DERROTA FINAL !!! \n" +"PUNTUACIÓN : "+ myPacman.score );
                 reiniciar();
+
             }
 
             //reinicio(); // pacmancoor , llenar mapa (funcion arriba),tiempo máximo -z loop (arrancar juego)
@@ -198,6 +238,7 @@ const s = (p) => {
 
 
     p.keyPressed = function () {
+        p.noLoop();
         let direccion = 0;
         pacmanprueba.coordX = myPacman.coordX;
         pacmanprueba.coordY = myPacman.coordY;
@@ -242,7 +283,7 @@ const s = (p) => {
             console.log("incorrecto");
         }
         console.log("resultado :", resultado);
-
+        p.loop();
     }
 
     function comprobarpacman(pc) {
