@@ -18,6 +18,8 @@
   - Pull Request
   - Branques 
   - Commits 
+  - Tags
+  - Issues
 
 Enlaces:
 
