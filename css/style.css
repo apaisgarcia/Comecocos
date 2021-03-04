@@ -34,7 +34,10 @@ img{
 
 
 }
-
+h3{
+  text-align: center;
+  color:cadetblue;
+}
 footer h3{
   text-align: center;
   color:white;
@@ -45,7 +48,8 @@ footer h3{
 
 }
 #fotoIndex{
-  text-align: center;
+  display:block;
+  margin:auto;
   width: 600px;
   height: 450px;
 }

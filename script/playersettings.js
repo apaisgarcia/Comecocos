@@ -47,7 +47,7 @@ function usuario() {
        console.log("Dificultad : ", dificultadJugador);
     alert(
         " Usuario Configurado\n"+
-        " Doble Click en Inicio\n"
+        " Ve al boton Juego \n"
 
 
 

@@ -7,6 +7,7 @@
       <change beforePath="$PROJECT_DIR$/html/ayuda.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/ayuda.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/player.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/player.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/playersettings.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/playersettings.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/start.html" beforeDir="false" afterPath="$PROJECT_DIR$/start.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -153,7 +154,7 @@
       <workItem from="1614618918431" duration="6728000" />
       <workItem from="1614869841244" duration="299000" />
       <workItem from="1614870244204" duration="9811000" />
-      <workItem from="1614881675633" duration="1087000" />
+      <workItem from="1614881675633" duration="1897000" />
     </task>
     <task id="LOCAL-00001" summary="añadimos estructura básica">
       <created>1607707279785</created>
