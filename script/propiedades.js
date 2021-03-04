@@ -39,7 +39,7 @@ function pedirDatos() {
     //window.open( mywindow);
 }
 
-function usuario() {
+/*function usuario() {
 //un usuario que se registre
     if (localStorage.getItem("nombre")===null && localStorage.getItem("user")===null) {
 
@@ -53,10 +53,12 @@ function usuario() {
 
         nombre = localStorage.getItem('nombre');
         user = localStorage.getItem('user');
+
+
         var myWindow = window.open("https://apaisgarcia.github.io/Comecocos/", "MsgWindow");
     }
 
-}
+}*/
 
 
 

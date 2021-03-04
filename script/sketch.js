@@ -13,7 +13,7 @@ const s = (p) => {
     var arrayRocasMapa = [];
     var arrayComidaMapa = [];
     var arrayCerezasMapa = []; // esto es como un new array
-    var timer=30;
+    var timer=40;
 
 
     var myJuego = new Game(); // si hago yo el array
@@ -40,16 +40,18 @@ const s = (p) => {
         // console.log("estoy en setup");
 
         //p.createCanvas(COLUMNS * SIZE_IMAGE, ROWS * SIZE_IMAGE);
-        if (localStorage.getItem('nombreJugador') != null &&  localStorage.getItem('nombreJugador') != "" && localStorage.getItem('mailJugador') != null  && localStorage.getItem ('mailJugador') !=""){
-
+        if (comprobarUsuario()){
+            console.log((" estoy en el canvas"));
             permitirPartida=1;
 
             p.createCanvas(myJuego.columnGame * myJuego.sizeImage, myJuego.rowsGame * myJuego.sizeImage + HEIGHT_TEXT); // ancho y alto (el orden)
             // console.log("Filas :", myJuego.mapa.length);
-            myPacman.direction = 1;
-            llenarMapa();
 
-            dificultad(localStorage.getItem("dificultadJugador"));
+
+            llenarMapa();
+            myPacman.direction = 1;
+            asignarDificultad(parseInt(localStorage.getItem("Dificultad")));
+            console.log(localStorage.getItem("Dificultad"));
         }else{
             permitirPartida=0;
             alert(
@@ -58,6 +60,7 @@ const s = (p) => {
 
 
             );
+            p.noLoop();
             console.log(" No usuario");
             //p.noLoop();
         }
@@ -186,18 +189,23 @@ const s = (p) => {
 
         }
     }
-    function dificultad (diff) {
-
-        switch ( diff) {
+    function asignarDificultad (diff) {
+        console.log(" valor diff ", diff);
+        switch (diff) {
             case 1:
+                console.log(" valor facil  ");
                 timer = 40;
                 break;
             case 2:
+                console.log(" valor medio ");
                 timer = 30;
                 break;
             case 3:
+                console.log(" valor alto");
                 timer = 20;
                 break;
+            default:
+                console.log("No me entero de nada");
         }
 
     }
@@ -206,7 +214,7 @@ const s = (p) => {
         p.noLoop();
         p.clear();
         llenarMapa();
-        timer = 30;
+        asignarDificultad(parseInt(localStorage.getItem("Dificultad")));
         myPacman.lives=3;
         p.loop();
         myPacman.score=0;
@@ -222,7 +230,7 @@ const s = (p) => {
             if(myPacman.lives>0){
                 myPacman.lives --;
                 let opcion = confirm("TE QUEDAN " + myPacman.lives + " VIDAS");
-                timer=30;
+                asignarDificultad(parseInt(localStorage.getItem("Dificultad")));
 
             }
             else{
